@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h3>Sign Up Form</h3>
+        <hr>
+        <form  class="mb-3">
+            <form [formGroup]="signUpForm" (ngSubmit)="submitsignUp()">
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text"  id="Email"
+                         placeholder="Enter email" required 
+                          formControlName="email" class="form-control">
+                    <div class="alert-danger" *ngIf="signUpForm.controls.email.touched && signUpForm.controls.email.errors?.required">Email is
+                        required</div>
+                        
+                        <!-- <div class="alert-danger"
+                         *ngIf="signUpForm.controls.email.touched && signUpForm.controls.email.errors?.email">Must be of type email
+                            </div> -->
+                        
+                </div>
+                <div class="form-group mb-3">
+                    <label for="InputPassword">Password</label>
+                    <input type="password"  id="InputPassword" formControlName="password"
+                        placeholder="Password" required  
+                        name="password" class="form-control">
+                        <div class="alert-danger" *ngIf="signUpForm.controls.password.touched && signUpForm.controls.password.errors?.required">Password is
+                            required</div>
+                            
+                </div>
+                
+        
+                <div >
+                    <button type="submit"
+                        [disabled]="signUpForm.invalid  "
+                          class="btn btn-primary">Sign Up</button>
+                </div>
+        
+            </form>
+
+        </form>
+    </div>
+</div>

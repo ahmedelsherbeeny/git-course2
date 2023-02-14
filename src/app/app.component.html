@@ -1,5 +1,48 @@
 
 
 
+<!-- <app-child></app-child>
+<app-parent></app-parent> -->
+<app-head></app-head>
+<div class="alert alert-danger" *ngIf="errorMessage$ | async as error">{{error}}</div>
+<app-loader *ngIf="showLoading$ | async"></app-loader>
 
-<app-parent></app-parent>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+<!--template driven form-->
+
+
+<!--so here we use directives and attributes in template to provide behaviour and valdation-->
+<!--its directives are ngForm ngSubmit ngModel which create the form-->
+<!--the data model is not structrued-->
+<!-- to use it we import formsmodule-->
+<!--we do not have cntrol over the instance of formcontrol-->
+<!--it is asynhronous that does not wait -->
+         <!-- <form  class="register-form" #userForm="ngForm" (ngSubmit)="registerForm(userForm)">
+            <p>userName: <input type="text" name="name" ngModel ></p>
+            <p>email: <input type="email" name="email" ngModel ></p>
+            <button>submit</button>
+
+
+
+         </form> -->
+
+
+
+
+
+<!-- <button (click)="increaseDates()">increment Date</button>
+<button (click)="decreaseDates()">decrease Date</button>
+
+<ul>
+    <li *ngFor="let dt of arrtoshow "> {{dt}}</li>
+</ul> -->

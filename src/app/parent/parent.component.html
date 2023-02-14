@@ -1,9 +1,4 @@
 
-<input type="text" #input>
-<button type="submit" (click)="sumitVal(input)"> submit</button>
-
-
-<app-child [value]="inputText" *ngIf="!destroy">
-    <h4>hi there iam the projection{{inputText}}</h4>
-</app-child>
-<button (click)="destroyComponent()">destroy</button>
+<div class="container">
+    the text you entered is: {{inputText}}
+</div>

@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h3>Log In Form</h3>
+        <hr>
+        <form  class="mb-3">
+            <form [formGroup]="logInForm" (ngSubmit)="submitLogin()">
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text"  id="Email"
+                         placeholder="Enter email" required 
+                          formControlName="email" class="form-control">
+                    <div class="alert-danger" *ngIf="logInForm.controls.email.touched && logInForm.controls.email.errors?.required">Email is
+                        required</div>
+                        
+                        <!-- <div class="alert-danger"
+                         *ngIf="logInForm.controls.email.touched && logInForm.controls.email.errors?.email">Must be of type email
+                            </div> -->
+                        
+                </div>
+                <div class="form-group mb-3">
+                    <label for="InputPassword">Password</label>
+                    <input type="password"  id="InputPassword" formControlName="password"
+                        placeholder="Password" required  
+                        name="password" class="form-control">
+                        <div class="alert-danger" *ngIf="logInForm.controls.password.touched && logInForm.controls.password.errors?.required">Password is
+                            required</div>
+                            
+                </div>
+                
+        
+                <div >
+                    <button type="submit"
+                        [disabled]="logInForm.invalid  "
+                          class="btn btn-primary">Sign in</button>
+                </div>
+        
+            </form>
+
+        </form>
+    </div>
+</div>
