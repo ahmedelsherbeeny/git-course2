@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-6 offset-md-3">
-        <h3>Log In Form</h3>
+        <h3>Log In Form here</h3>
         <hr>
         <form  class="mb-3">
             <form [formGroup]="logInForm" (ngSubmit)="submitLogin()">
@@ -12,9 +12,7 @@
                     <div class="alert-danger" *ngIf="logInForm.controls.email.touched && logInForm.controls.email.errors?.required">Email is
                         required</div>
                         
-                        <!-- <div class="alert-danger"
-                         *ngIf="logInForm.controls.email.touched && logInForm.controls.email.errors?.email">Must be of type email
-                            </div> -->
+                        
                         
                 </div>
                 <div class="form-group mb-3">
